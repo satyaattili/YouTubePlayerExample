@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.design.widget.CoordinatorLayout
+    android:id="@+id/main_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleMarginEnd="64dp"
+            app:expandedTitleMarginStart="48dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical">
+                <RelativeLayout android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                    <com.google.android.youtube.player.YouTubePlayerView
+                        android:id="@+id/youtube_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_scrollFlags="scroll|enterAlways"/>
+                    <ImageButton
+                        android:id="@+id/play_bt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:visibility="gone"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/yt_play_btn"/>
+                </RelativeLayout>
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:orientation="vertical"
+                              android:background="@color/video_detail_bg">
+                    <RelativeLayout android:layout_width="match_parent"
+                                    android:layout_height="60dp">
+                        <TextView android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:textSize="16dp"
+                                  android:layout_centerVertical="true"
+                                  android:padding="5dp"
+                                  android:id="@+id/screen_video_less"
+                                  android:text="@string/more"
+                                  android:contentDescription="@string/more"
+                                  android:layout_alignParentRight="true"
+                                  android:layout_alignParentEnd="true"
+                                  android:maxLines="1"
+                                  android:ellipsize="end"/>
+                        <TextView android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:textSize="16dp"
+                                  android:layout_centerVertical="true"
+                                  android:maxLines="1"
+                                  android:padding="5dp"
+                                  android:layout_toLeftOf="@id/screen_video_less"
+                                  android:layout_alignParentStart="true"
+                                  android:layout_alignParentLeft="true"
+                                  android:id="@+id/screen_video_title"
+                                  android:ellipsize="end"/>
+                    </RelativeLayout>
+
+                    <TextView android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:text="3hr ago"
+                              android:textSize="10dp"
+                              android:paddingBottom="5dp"
+                              android:paddingLeft="5dp"/>
+
+                    <LinearLayout android:layout_width="match_parent"
+                                  android:layout_height="wrap_content"
+                                  android:orientation="vertical"
+                                  android:visibility="gone"
+                                  android:id="@+id/more_layout">
+
+                        <TextView android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:id="@+id/video_description"
+                                  android:padding="5dp"
+                                  android:text="intention is to keep all of us updated about changes happening around. It will be best for an individual and team if all of us spend few minutes and read about Agile terminologies such as Scrum, Scrum Master, Product Owner, Sprint, User Story, Acceptability Criteria."/>
+
+                        <LinearLayout android:layout_width="match_parent"
+                                      android:layout_height="50dp"
+                                      android:orientation="horizontal">
+                            <TextView android:layout_width="wrap_content"
+                                      android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+
+
+                        <View android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:visibility="gone"
+                              android:layout_marginBottom="3dp"
+                              android:layout_marginTop="3dp"
+                              android:background="@drawable/horizontal_line"/>
+
+                        <RelativeLayout
+                            android:id="@+id/channel_layout"
+                            android:layout_width="match_parent"
+                            android:visibility="gone"
+                            android:layout_height="60dp">
+                            <ImageView android:layout_width="30dp" android:layout_height="30dp"
+                                       android:src="@drawable/abp_news"
+                                       android:id="@+id/channel_icon"
+                                       android:layout_alignParentStart="true"
+                                       android:layout_alignParentLeft="true"
+                                       android:layout_centerVertical="true"
+                                       android:layout_margin="5dp"/>
+
+                            <LinearLayout android:layout_width="wrap_content"
+                                          android:layout_height="wrap_content"
+                                          android:orientation="vertical"
+                                          android:layout_toRightOf="@id/channel_icon"
+                                          android:layout_centerVertical="true">
+                                <TextView android:layout_width="wrap_content"
+                                          android:layout_height="wrap_content"
+                                          android:text="ABP News"
+                                          android:textSize="15dp"
+                                          android:id="@+id/channel_name"/>
+
+                                <TextView android:layout_width="wrap_content"
+                                          android:layout_height="wrap_content"
+                                          android:textSize="12dp"
+                                          android:paddingTop="4dp"
+                                          android:text="1500 Videos"/>
+                            </LinearLayout>
+
+
+                            <ImageView android:layout_width="35dp" android:layout_height="35dp"
+                                       android:src="@drawable/add_channel"
+                                       android:layout_alignParentRight="true"
+                                       android:layout_alignParentEnd="true"
+                                       android:layout_margin="5dp"
+                                       android:layout_centerVertical="true"/>
+
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <RelativeLayout
+                    android:id="@+id/up_next_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:visibility="gone"
+                    android:background="@android:color/white">
+                    <ImageView android:layout_width="24dp"
+                               android:layout_height="24dp"
+                               android:id="@+id/upnext_image"
+                               android:layout_margin="5dp"
+                               android:layout_alignParentLeft="true"
+                               android:layout_alignParentStart="true"
+                               android:src="@drawable/yt_play_btn"
+                               android:layout_centerVertical="true"/>
+
+                    <TextView android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:text="UP NEXT" android:textSize="16dp"
+                              android:padding="5dp"
+                              android:textStyle="bold"
+                              android:textColor="@android:color/black"
+                              android:layout_toRightOf="@id/upnext_image"
+                              android:layout_centerVertical="true"/>
+
+                    <android.support.v7.widget.SwitchCompat android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_alignParentRight="true"
+                                                            android:layout_alignParentEnd="true"
+                                                            android:layout_margin="5dp"
+                                                            android:layout_centerVertical="true"
+                                                            android:text="Auto Play"
+                                                            android:textStyle="bold"
+                                                            android:textSize="14dp"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/video_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+</android.support.design.widget.CoordinatorLayout>

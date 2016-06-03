@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="shadow">#555555</color>
+    <color name="title">#777777</color>
+    <color name="bg">#BBDEFB</color>
+    <color name="list_item_bg">#ffffff</color>
+
+    <color name="video_detail_bg">#FFF0F0F0</color>
+</resources>

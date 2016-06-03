@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/parent_list_item"
+                android:layout_width="match_parent"
+                android:layout_height="73dp"
+                android:layout_margin="7dp">
+    <RelativeLayout android:layout_width="103dp" android:layout_height="73dp"
+                    android:id="@+id/thumbnail_layout"
+                    android:layout_centerVertical="true"
+                    android:paddingRight="5dp"
+                    android:paddingEnd="5dp"
+                    android:paddingStart="5dp"
+                    android:paddingLeft="5dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true">
+
+        <ImageView android:layout_width="match_parent" android:layout_height="match_parent"
+                   android:id="@+id/video_thumbnail"
+                   android:layout_centerInParent="true"
+                   android:src="@drawable/loading_thumbnail"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:textSize="12dp" android:textColor="@android:color/white"
+                  android:layout_alignParentBottom="true"
+                  android:layout_alignParentRight="true"
+                  android:layout_alignParentEnd="true"
+                  android:padding="6dp"
+        android:id="@+id/video_duration"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/thumbnail_layout"
+                    android:layout_toEndOf="@id/thumbnail_layout">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:id="@+id/video_title"
+                  android:maxLines="2"
+                  android:ellipsize="end"
+                  android:layout_alignParentTop="true"
+                  android:text="What's new in Android - Google I/O 2016"/>
+        <LinearLayout android:layout_width="wrap_content"
+                      android:layout_alignParentBottom="true"
+                      android:layout_height="wrap_content"
+                      android:visibility="gone"
+                      android:orientation="horizontal">
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:id="@+id/up_thumb"
+                      android:paddingLeft="7dp"
+                      android:paddingStart="7dp"
+                      android:drawablePadding="3dp"
+                      android:drawableLeft="@drawable/thumbsup"
+                      android:drawableStart="@drawable/thumbsup"
+                      android:text="89"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:id="@+id/down_thumb"
+                      android:paddingLeft="7dp"
+                      android:paddingStart="7dp"
+                      android:drawablePadding="3dp"
+                      android:drawableLeft="@drawable/thumbsdown"
+                      android:drawableStart="@drawable/thumbsdown"
+                      android:text="09"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:id="@+id/comments"
+                      android:paddingLeft="7dp"
+                      android:paddingStart="7dp"
+                      android:drawablePadding="3dp"
+                      android:drawableLeft="@drawable/comments"
+                      android:drawableStart="@drawable/comments"
+                      android:text="113"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:id="@+id/downlaod"
+                      android:paddingLeft="7dp"
+                      android:paddingStart="7dp"
+                      android:drawablePadding="3dp"
+                      android:drawableLeft="@drawable/download"
+                      android:drawableStart="@drawable/download"
+                      android:text=""/>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
